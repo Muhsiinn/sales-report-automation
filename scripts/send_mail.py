@@ -5,11 +5,10 @@ from dotenv import load_dotenv
 import os
 import smtplib
 from pathlib import Path
-dotenv_path = Path(__file__).resolve().parent.parent/ '.env.txt'
+dotenv_path = Path(__file__).resolve().parent.parent/ '.env'
 print("EMAIL_ADDRESS loaded as:", os.getenv("EMAIL_ADDRESS"))
 print("EMAIL_PASSWORD loaded as:", os.getenv("EMAIL_PASSWORD"))
 
-print(dotenv_path)
 load_dotenv(dotenv_path)
 EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
@@ -29,7 +28,7 @@ html_parts = [df_to_html_table(df.head(10), name) for name, df in sheets.items()
 
 html_content = f"""
 <html><body>
-<h1>📊 Weekly Sales Report</h1>
+<h1>📊Sales Report</h1>
 {''.join(html_parts)}
 <p>– Automated by Sales Report Automation</p>
 </body></html>
