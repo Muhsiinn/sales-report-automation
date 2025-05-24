@@ -18,16 +18,17 @@ This project is an initial version of an automated reporting and email delivery 
 
 ## 📂 Project Structure
 
-sales-report-automation/
-├── data/ # Raw and processed data
-├── reports/ # Generated Excel reports
-├── scripts/
-│ ├── generate_report.py # Report creation logic
-│ └── send_email.py # Email automation script
-├── notebooks/ # Jupyter workbench for exploration
-├── .env # Email credentials (ignored in Git)
-├── .gitignore
-└── README.md
+- sales-report-automation/
+  - data/
+  - reports/
+  - scripts/
+    - generate_report.py
+    - send_email.py
+  - notebooks/
+  - .env
+  - .gitignore
+  - README.md
+
 
 
 ---
