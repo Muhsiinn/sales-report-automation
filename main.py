@@ -6,7 +6,7 @@ df["Total"]= df["Quantity"] * df["UnitPrice"]
 def generate_report(df):
     #stock description according to stock ID
     stock_info = df[["StockCode","Description"]].drop_duplicates()
-    stock_info.to_excel("stock_info.xlsx",index=False)
+    stock_info.to_excel("data/stock_info.xlsx",index=False)
     # Convert necessary columns to numeric
     df["Quantity"] = pd.to_numeric(df["Quantity"], errors="coerce")
     df["Total"] = pd.to_numeric(df["Total"], errors="coerce")

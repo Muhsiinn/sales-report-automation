@@ -5,7 +5,6 @@ from xlsxwriter import Workbook
 df = pd.read_excel("data/Online Retail.xlsx")
 df["Total"]= df["Quantity"] * df["UnitPrice"]
 
-# Assume you've already loaded and cleaned your DataFrame as `df`
 
 with pd.ExcelWriter("reports/ecommerce_report.xlsx", engine="xlsxwriter") as writer: 
     pd.DataFrame({"Metric": ["Total Revenue"], "Value": [df["Total"].sum()]}).to_excel(writer, sheet_name="Revenue", index=False)
